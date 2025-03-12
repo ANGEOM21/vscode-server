@@ -1,0 +1,66 @@
+body {
+  min-height: 568px;
+  min-width: 320px;
+  overflow: auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+.login-form > .field {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .login-form > .field {
+    flex-direction: column;
+  }
+}
+
+.login-form > .error {
+  color: red;
+  margin-top: 16px;
+}
+
+.login-form > .field > .password {
+  background-color: rgb(244 247 252 / 0%);
+  border-radius: 0x;
+  border: 3px solid #ddd;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: black;
+  flex: 1;
+  padding: 16px;
+}
+.password:-webkit-input-placeholder,:-ms-input-placeholder,:-ms-input-placeholder{
+    color: red;
+}
+.login-form > .user {
+  display: none;
+}
+
+.login-form > .field > .submit {
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .login-form > .field > .submit {
+    margin-left: 0px;
+    margin-top: 16px;
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+}
+::placeholder{
+  color: rgb(0, 0, 0);
+}
