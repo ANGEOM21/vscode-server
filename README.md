@@ -1,78 +1,40 @@
-# code-server
+# Cara Install vscode-server
 
-[!["GitHub Discussions"](https://img.shields.io/badge/%20GitHub-%20Discussions-gray.svg?longCache=true&logo=github&colorB=purple)](https://github.com/coder/code-server/discussions) [!["Join us on Slack"](https://img.shields.io/badge/join-us%20on%20slack-gray.svg?longCache=true&logo=slack&colorB=brightgreen)](https://coder.com/community) [![Twitter Follow](https://img.shields.io/twitter/follow/CoderHQ?label=%40CoderHQ&style=social)](https://twitter.com/coderhq) [![codecov](https://codecov.io/gh/coder/code-server/branch/main/graph/badge.svg?token=5iM9farjnC)](https://codecov.io/gh/coder/code-server) [![See latest](https://img.shields.io/static/v1?label=Docs&message=see%20latest&color=blue)](https://coder.com/docs/code-server/latest)
+## Langkah-langkah Installasi
 
-Run [VS Code](https://github.com/Microsoft/vscode) on any machine anywhere and
-access it in the browser.
+### 1. Download File
+Unduh file dari bagian **Releases** di repository code-server.
 
-![Screenshot](./assets/screenshot.png)
+### 2. Ekstrak File
+Ekstrak file yang sudah diunduh ke dalam folder pilihanmu.
 
-## Highlights
-
-- Code on any device with a consistent development environment
-- Use cloud servers to speed up tests, compilations, downloads, and more
-- Preserve battery life when you're on the go; all intensive tasks run on your
-  server
-
-## Requirements
-
-See [requirements](https://coder.com/docs/code-server/latest/requirements) for minimum specs, as well as instructions
-on how to set up a Google VM on which you can install code-server.
-
-**TL;DR:** Linux machine with WebSockets enabled, 1 GB RAM, and 2 vCPUs
-
-## Getting started
-
-There are four ways to get started:
-
-1. Using the [install
-   script](https://github.com/coder/code-server/blob/main/install.sh), which
-   automates most of the process. The script uses the system package manager if
-   possible.
-2. Manually [installing
-   code-server](https://coder.com/docs/code-server/latest/install)
-3. Deploy code-server to your team with [coder/coder](https://cdr.co/coder-github)
-4. Using our one-click buttons and guides to [deploy code-server to a cloud
-   provider](https://github.com/coder/deploy-code-server) ⚡
-
-If you use the install script, you can preview what occurs during the install
-process:
-
+### 3. Masuk ke Folder bin
+Buka terminal dan navigasikan ke dalam folder hasil ekstraksi:
 ```bash
-curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
+cd path/to/extracted-folder/bin
 ```
 
-To install, run:
-
+### 4. Atur Password
+Sebelum menjalankan code-server, atur password akses dengan perintah berikut:
 ```bash
-curl -fsSL https://code-server.dev/install.sh | sh
+export PASSWORD='isi password'
+```
+Gantilah `'isi password'` dengan password yang ingin kamu gunakan.
+
+### 5. Jalankan code-server
+Jalankan perintah berikut untuk memulai code-server:
+```bash
+./vscode
 ```
 
-When done, the install script prints out instructions for running and starting
-code-server.
+### 6. Akses melalui Browser
+Buka browser dan akses code-server melalui URL berikut:
+```
+http://localhost:8080
+```
+Gunakan password yang sudah kamu atur sebelumnya untuk login.
 
-> **Note**
-> To manage code-server for a team on your infrastructure, see: [coder/coder](https://cdr.co/coder-github)
+---
 
-We also have an in-depth [setup and
-configuration](https://coder.com/docs/code-server/latest/guide) guide.
+Sekarang, kamu sudah bisa menggunakan Visual Studio Code di browser dengan code-server! 🚀
 
-## Questions?
-
-See answers to [frequently asked
-questions](https://coder.com/docs/code-server/latest/FAQ).
-
-## Want to help?
-
-See [Contributing](https://coder.com/docs/code-server/latest/CONTRIBUTING) for
-details.
-
-## Hiring
-
-Interested in [working at Coder](https://coder.com/careers)? Check out [our open
-positions](https://coder.com/careers#openings)!
-
-## For Organizations
-
-Want remote development for your organization or enterprise? Visit [our
-website](https://coder.com) to learn more about Coder.
